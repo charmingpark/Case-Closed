@@ -34,6 +34,7 @@ function listPrimes(num) {
       }
     }
 
+    
     if(isPrime){
       result = `${result}-${i}`
     }
