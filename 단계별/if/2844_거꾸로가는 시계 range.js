@@ -53,3 +53,11 @@ for(el of Array(45).keys()){
   M = plusSign((m+el),60)// (h, m)
 }
 console.log(H, M)
+
+
+/* 비슷한 문제 풀이 */
+const fs = require("fs");
+const input = fs.readFileSync("/dev/stdin")
+const sample = Number(input); // 2
+for (el of Array(9).keys()){
+console.log(`${sample} * ${el+1} = ${sample * (el+1)}`)}

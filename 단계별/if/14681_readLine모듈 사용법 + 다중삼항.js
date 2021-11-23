@@ -34,3 +34,24 @@ rl.on("line", function (line) {
 // rl 에서 사용되는 메서드나 명령에 속하기 때문에 
 // 정확한 내용은 깊이 알아보는 수 밖에 없지만,
 // 변화되는 부분은 전부 정리 했으니 이대로 사용만 하면 된다.
+
+
+/* 완성된 모듈 예시 */
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+let input = [];rl.on("line", function (line) {
+  input.push(parseInt(line));
+}).on("close", function () {
+  ///////////////////////////////
+  const A = input[0];
+  const B = input[1];
+
+  let result = (A > 0) ? (B > 0 ? 1 : 4):(B > 0 ? 2 : 3);
+  console.log(result);
+  ///////////////////////////////
+  process.exit();
+});
+
