@@ -3,7 +3,7 @@ function stringArr(string) {
     console.log(key)
   }
 }
-stringArr('OurLoveIsEnd')
+stringArr('MyLoveIsYou')
 // String도 문자배열이기 때문에 of로 돌릴 수 있음.
 
 
@@ -13,7 +13,7 @@ function Arr(arr) {
     console.log(key)
   }
 }
-Arr(['Our','Love','Is','End'])
+Arr(['My','Love','Is','You'])
 // 배열은 당연히 of로 돌릴 수 있음.
 
 
@@ -23,20 +23,21 @@ function Arr(arr) {
     console.log(arr[key])
   }
 }
-Arr(['Our','Love','Is','End'])
+Arr(['My','Love','Is','You'])
 // 배열은 일반 for문으로 돌릴 수 있음.
 
 
 
 function ObjAndKey(Obj) {
-  for (let key = 0; key < Obj.length; key++) {
+  
+  for (let key = 0; key < Object.values(Obj).length; key++) {
+  // Obj의 길이는 어떻게 세죠?! => Object.keys 또는 values(Obj).length 
+  // key는 변동이 있으니 길이를 반환할 수 있는것은 Value.
     console.log(key)
-    
   }
 }
-ObjAndKey({0:'Our', 1:'love', 2:'is', 3:'end'})
-// 된다는 얘기가 있던데 아무튼 안됨.
-// ! 이유는 모르겠음
+ObjAndKey({0:'My', 1:'love', 2:'is', 3:'You'})
+
 
 
 function ObjAndKey(Obj) {
@@ -44,7 +45,7 @@ function ObjAndKey(Obj) {
     console.log(key)
   }
 }
-ObjAndKey({0:'Our', 1:'love', 2:'is', 3:'end'})
+ObjAndKey({0:'My', 1:'love', 2:'is', 3:'You'})
 // 0, 1, 2, 3 이 순차적으로 반환 됨.
 
 
