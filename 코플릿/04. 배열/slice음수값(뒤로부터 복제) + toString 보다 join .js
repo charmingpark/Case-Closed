@@ -7,6 +7,10 @@
 // output = createPhoneNumber([0, 1, 1, 4, 3, 2, 1, 8, 7, 6, 5]);
 // console.log(output); // --> '(011)4321-8765'
 
+// ! slice 사용시 주의사항
+// arr.slice(3,0) 거꾸로 잡으면 빈배열 [] 임.
+// arr.slice(2,2) 같은 값을 잡으면 빈배열 [] 임.
+
 function createPhoneNumber(arr) {
   let first;
   let secnd;

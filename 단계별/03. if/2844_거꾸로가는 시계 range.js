@@ -55,9 +55,31 @@ for(el of Array(45).keys()){
 console.log(H, M)
 
 
-/* 비슷한 문제 풀이 */
+/* 백준 2739 */
 const fs = require("fs");
 const input = fs.readFileSync("/dev/stdin")
 const sample = Number(input); // 2
 for (el of Array(9).keys()){
-console.log(`${sample} * ${el+1} = ${sample * (el+1)}`)}
+  console.log(`${sample} * ${el+1} = ${sample * (el+1)}`)
+}
+
+
+/* 백준 8393 */
+const fs = require("fs");
+const input = fs.readFileSync("/dev/stdin")
+const n = Number(input); // 2
+let result = 0;
+for(el of Array(n+1).keys()){
+  result+=el
+}
+console.log(result)
+
+// 아래와 같다. (아래가 살짝 더 빠르다)
+let n=4
+let result = 0;
+for(let i = 0 ; i <= n ; i++){
+  result+=i
+}
+console.log(result)
+
+

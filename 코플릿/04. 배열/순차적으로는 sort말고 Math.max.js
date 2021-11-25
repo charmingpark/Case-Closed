@@ -5,6 +5,11 @@ function getLongestWord(str) {
   // sort는 유니코드 순이라서 10과 3즌 3이 더 크다고 함. 쓰면 안됨.
   // Math.max는 여러개의 숫자들 만 비교할 수 있음. 배열을 비교하는 것이 아님.
   // Math.max는 immutable 매서드 임.(원래 숫자에 쓰는거다. 숫자 = 원시자료형)
+  /*
+  let arr = [10, 30, 40, 20]
+  let value = Math.max(arr)
+  결과: NaN
+  */
 
   return(newArr.filter(el => el.length === lengths)[0])
   // 같은 길이가진 문자들이 배열로 답이 나와버릴 수 있음.
