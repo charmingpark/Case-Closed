@@ -156,7 +156,13 @@ describe('Object에 대해서 학습합니다.', function () {
     // expect(obj['relations']).to.deep.equal([1, 2, 3]);
 
     const copiedObj = Object.assign({}, obj);
-    // ! assign : 왼쪽과 오른쪽을 더한다음 주소는 복제 X. // JSON을 사용해 깊은 복사를 시켜야 함.
+    // ! assign 사용하기 나름으로 깊거나 얕은 복사를 해 줌.
+    // ! 깊은 복사를 시켜야 함. (방법은 여러가지)
+    // JSON.parse(JSON.stringify(obj)) => 객체를 완전히 문자화 시켰다가 다시 풀어주는 기능.
+    // 재귀.
+    // 라이브러리 lodash 의 cloneDeep();
+
+
     copiedObj.mastermind = 'James Wood';
     // console.log(obj.mastermind)
     expect(obj.mastermind).to.equal('Joker');
@@ -174,6 +180,9 @@ describe('Object에 대해서 학습합니다.', function () {
     가이드가 될 만한 학습자료를 첨부합니다.
       https://scotch.io/bar-talk/copying-objects-in-javascript
       https://medium.com/watcha/깊은-복사와-얕은-복사에-대한-심도있는-이야기-2f7d797e008a
+
+      // 깊은 복사 = 주소에 있는 내용 그냥 복제. 주소공유 안함.
+      // 얕은 복사 = 주소값 공유.
     */
   });
 });

@@ -10,6 +10,7 @@
 // ! slice 사용시 주의사항
 // arr.slice(3,0) 거꾸로 잡으면 빈배열 [] 임.
 // arr.slice(2,2) 같은 값을 잡으면 빈배열 [] 임.
+// ! 비슷한 개념인 substring은 거꾸러 잡아도 똑같이 쪼개준다. 하지만 문자열에서만 가능. 
 
 function createPhoneNumber(arr) {
   let first;

@@ -71,7 +71,8 @@ describe('Spread syntax에 대해 학습합니다.', function () {
     }
 
     // arguments를 통해 '비슷하게' 함수의 인자들을 다룰 수 있습니다. (spread syntax 도입 이전)
-    // ! arguments는 모든 함수의 실행 시 자동으로 생성되는 '객체'입니다.
+    // ! arguments는 모든 함수의 실행 시 자동으로 생성되는 '객체'입니다. 
+    // ! 이때, 이 객체는 유사 배열. 유사배열은 length 라는 key를 내장하고 있다.
     function getAllParamsByArgumentsObj() {
       return arguments;
     }
@@ -80,11 +81,16 @@ describe('Spread syntax에 대해 학습합니다.', function () {
      // ['first', 'second', 'third']
     const argumentsObj = getAllParamsByArgumentsObj('first', 'second', 'third');
      // {0: 'first', 1: 'second', 2: 'third'}
+
     // const argsArr = Array.from(argumentsObj);
     // const argsArr2 = Array.from({0: 'first', 1: 'second', 2: 'third'});
     // console.log(argumentsObj)
     // console.log(argsArr)
-    // TODO: 질문 왜 []? ['first', 'second', 'third']?
+    // ! 왜 같은 내용 돌리는데 []? ['first', 'second', 'third']?
+    // ! 내장된 length 값이 있느냐 없느냐에 따라 Array.from()이 객체인지 유사배열인지를 확인하고 값을 출력한다.
+    // length가 있으면, value값을 배열에 넣어주고, 없으면 인식을 못해서 그냥 빈배열[]을 줌.
+
+
 
 
     expect(restParams).to.deep.equal(['first', 'second', 'third']);
